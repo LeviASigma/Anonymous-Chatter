@@ -1,0 +1,88 @@
+/* Light Mode Styles */
+body.light-mode {
+    --background-color: #f4f4f4;
+    --text-color: #000000;
+    --container-background: #ffffff;
+    --input-background: #ffffff;
+    --input-border: #ddd;
+    --message-background: #ffffff;
+    --seen-count-color: #888;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-color: #181818;
+    --text-color: #ffffff;
+    --container-background: #2c2c2c;
+    --input-background: #3a3a3a;
+    --input-border: #555;
+    --message-background: #2c2c2c;
+    --seen-count-color: #aaaaaa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#username-container, #chat-container {
+    background: var(--container-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+#messages {
+    border: 1px solid var(--input-border);
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    background-color: var(--message-background);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--message-background);
+}
+
+.chat-image {
+    max-width: 100%;
+    max-height: 150px;
+    margin-top: 5px;
+    display: block;
+}
+
+.seen-count {
+    font-size: 0.8em;
+    color: var(--seen-count-color);
+}
+
+#message-input {
+    width: calc(100% - 60px);
+    padding: 5px;
+    background-color: var(--input-background);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+}
+
+#send-button, #send-image-button, #set-username-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: var(--input-background);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    cursor: pointer;
+}
